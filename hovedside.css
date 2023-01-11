@@ -1,0 +1,26 @@
+#front {
+    display:  grid;
+    grid-template-areas: "header header header "
+                         "main main main"
+                         "footer footer footer";
+   grid-template-columns: .0.5fr 3fr 0.5fr;  
+   grid-template-rows: 0.5fr 1fr 0.5fr;                    
+}   
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 1.5rem;
+}
