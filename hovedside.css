@@ -1,26 +1,36 @@
-#front {
-    display:  grid;
-    grid-template-areas: "header header header "
-                         "main main main"
-                         "footer footer footer";
-   grid-template-columns: .0.5fr 3fr 0.5fr;  
-   grid-template-rows: 0.5fr 1fr 0.5fr;                    
-}   
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet');
+
+:root {
+    --white: #FFFFFF;
+    --gray: #808080;
+    --lightblue: #ADD8E6;
+    --maxwidth: 1200px;
+    --rootsize: 20px
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+div.main {
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    position: relative;
+    padding-top: 60px;
+}
 
 header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-}
-
-header h1 {
-    display: inline-block;
-    margin: 0 0.5rem;
-    padding: 1.5rem;
+    display: flex;
+    padding: 1rem;
+    border-top: .1rem solid var(--gray);
+    border-bottom: .1rem solid var(--gray);
+    border-left: .1rem solid var(--gray);
+    border-right: .1rem solid var(--gray);
+    
 }
