@@ -3,7 +3,9 @@
 :root {
     --white: #FFFFFF;
     --gray: #808080;
+    --lightgray: #D3D3D3;
     --lightblue: #ADD8E6;
+    --black: #000000;
     --maxwidth: 1200px;
     --rootsize: 20px
 }
@@ -34,3 +36,20 @@ header {
     border-right: .1rem solid var(--gray);
     
 }
+
+
+#Kategorier {
+    width: 100%;
+    display: flex;
+    padding-top: 60px;
+    justify-content: space-evenly;
+    background-color: var(--lightgray);
+    padding-block: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--black);
+}
+
+
+
+
