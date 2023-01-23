@@ -12,14 +12,14 @@
 
 body {
     background-color: var(--white);
-    font-family: 'Roboto', sans-serif;
+    font-size: var(--rootsize);
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-div.main {
+div.container {
     width: 100%;
     max-width: var(--maxwidth);
     margin: 0 auto;
@@ -34,22 +34,39 @@ header {
     border-bottom: .1rem solid var(--gray);
     border-left: .1rem solid var(--gray);
     border-right: .1rem solid var(--gray);
-    
+    font-family: 'Roboto', sans-serif;
 }
 
+article {
+    display: inline-block;
+    padding-top: 60px;
+}
 
-#Kategorier {
+.categories {
     width: 100%;
     display: flex;
     padding-top: 60px;
-    justify-content: space-evenly;
-    background-color: var(--lightgray);
-    padding-block: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    color: var(--black);
+    padding: .1rem .1rem;
 }
 
+main article h2 {
+    background-color: var(--gray);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--black);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+#undercategories {
+    width: 100%;
+    background-color: var(--white);
+    color: var(--black);
+    position: absolute;
+    border: .1rem solid var(--gray)
+}
 
 
 

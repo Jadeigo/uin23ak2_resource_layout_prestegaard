@@ -8,18 +8,54 @@
     <link href="hovedside.css" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
+    <div class="container">
         <header>
            <h1>RESSURSARKIV</h1>
         </header>
-        <main>
-            <nav>
-                <button class="kategorier">Kategori 1</button>
-                <button class="kategorier">Kategori 2</button>
-                <button class="kategorier">Kategori 3</button>
-            </nav>
+        <main id="categories">
+            <article class="catergories">
+                <h2>HTML</h2>
+            </article>
+            <article class="catergories">
+                <h2>CSS</h2>
+            </article>
+            <article class="catergories">
+                <h2>Javascript</h2>
+            </article>
+            <article class="catergories">
+                <h2>React</h2>
+            </article>
+            <article class="catergories">
+                <h2>Sanity and headless CMS</h2>
+            </article>
+        </main>
+        <main id="undercategories" class="">
+            <section id="HTML" class="">
+                <h2>HTML</h2>
+                <h3>HTML står for HyperText Markup Language,
+                     og er et strukturspråk som brukes for å 
+                     lage strukturer til nettside- og 
+                     applikasjonsgrensesnitt.
+                </h3>
+                <ul>
+                    <li> <a href="https://www.w3schools.com/html/">W3Schools</a></li>
+                    <li> <a href="https://html.spec.whatwg.org/multipage/">HTML Living standard</a></li>
+                    <li> <a href="https://html.com/">HTML.com Tutorials </a></li>
+                </ul>
+
+            </section>
+            <section id="CSS" class="hidden">
+            </section>
+            <section id="Javascript" class="hidden">
+            </section>
+            <section id="React" class="hidden">
+            </section>
+            <section id="CMS" class="hidden">
+            </section>
         </main>
     </div>
-    <script src="ressurser.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>
