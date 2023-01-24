@@ -94,3 +94,52 @@ const resources = [
         ]
     },
 ]
+
+function skriveUtResrources(resource) {
+    document.getElementById("underCategories").innerHTML = "";
+    
+    const kategoriNavn = document.createElement("h3");
+    kategoriNavn.textContent = resource.category;
+
+    const teksten = document.createElement("p");
+    teksten.textContent = resource.text;
+
+    const sourceListe = document.createElement("ul");
+
+    resource.sources.forEach(source => {
+        const sourceMaterial = document.createElement("li");
+
+        const sourcelenke = document.createElement("a");
+        sourcelenke.textContent = source.title;
+        sourcelenke.href = source.url;
+
+        sourceMaterial.appendChild(sourcelenke);
+        sourceListe.appendChild(sourceMaterial);
+    });
+
+    document.getElementById("underCategories").appendChild(kategoriNavn);
+    document.getElementById("underCategories").appendChild(teksten);
+    document.getElementById("underCategories").appendChild(sourceListe)
+}
+
+document.addEventListener("DOMContentloaded", skriveUtResrources);
+
+document.getElementById("htmlButton").addEventListener('click', function() {
+    skriveUtResrources(resources[0])
+})
+
+document.getElementById("cssButton").addEventListener('click', function() {
+    skriveUtResrources(resources[1])
+})
+
+document.getElementById("JavascriptButton").addEventListener('click', function() {
+    skriveUtResrources(resources[2])
+})
+
+document.getElementById("reactButton").addEventListener('click', function() {
+    skriveUtResrources(resources[3])
+})
+
+document.getElementById("cmsButton").addEventListener('click', function() {
+    skriveUtResrources(resources[4])
+})
