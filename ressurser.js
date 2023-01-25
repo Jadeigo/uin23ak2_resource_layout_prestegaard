@@ -125,21 +125,28 @@ function skriveUtResrources(resource) {
 document.addEventListener("DOMContentloaded", skriveUtResrources);
 
 document.getElementById("htmlButton").addEventListener('click', function() {
-    skriveUtResrources(resources[0])
+    skriveUtResrources(resources[0]);
+    document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("cssButton").addEventListener('click', function() {
-    skriveUtResrources(resources[1])
+    skriveUtResrources(resources[1]);
+    document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("JavascriptButton").addEventListener('click', function() {
-    skriveUtResrources(resources[2])
+    skriveUtResrources(resources[2]);
+    document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("reactButton").addEventListener('click', function() {
-    skriveUtResrources(resources[3])
+    skriveUtResrources(resources[3]);
+    document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("cmsButton").addEventListener('click', function() {
-    skriveUtResrources(resources[4])
+    skriveUtResrources(resources[4]);
+    document.querySelector("#underCategories").classList.remove("hidden")
 })
+
+

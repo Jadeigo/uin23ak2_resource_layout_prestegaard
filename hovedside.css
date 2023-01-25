@@ -48,6 +48,7 @@ button {
     margin-right: 1rem;
     border-color: var(--gray);
     border-style: solid;
+    margin-bottom: -10px;
 }
 
 button:focus {
@@ -60,10 +61,25 @@ button:focus {
     width: 100%;
     background-color: var(--white);
     color: var(--black);
-    position: absolute;
+    position: relative;
     border: .1rem solid var(--gray);
-    border-top-color: .2rem solid var(--lightblue);
+    border-top: 1rem solid var(--lightblue);
+    right: -2px;
+    transition: ease-in-out .4s;
 }
 
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
 
+div p {
+    font-weight: 100;
+}
 
+@media(max-width: 588px) {
+    nav.categories {
+        display: grid;
+        align-content: stretch;
+    }
+}
