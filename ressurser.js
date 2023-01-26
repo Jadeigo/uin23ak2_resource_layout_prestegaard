@@ -95,58 +95,86 @@ const resources = [
     },
 ]
 
+//Funksjon som lage elementer og hente fra array de forksjellige kategoriene.
 function skriveUtResrources(resource) {
-    document.getElementById("underCategories").innerHTML = "";
-    
-    const kategoriNavn = document.createElement("h3");
-    kategoriNavn.textContent = resource.category;
+    document.getElementById("underCategories").innerHTML = ""
 
-    const teksten = document.createElement("p");
-    teksten.textContent = resource.text;
+    const kategoriNavn = document.createElement("h3")
+    kategoriNavn.textContent = resource.category
 
-    const sourceListe = document.createElement("ul");
+    const teksten = document.createElement("p")
+    teksten.textContent = resource.text
 
+    const sourceListe = document.createElement("ul")
+
+    //lager en map array for å hente ut både tittel og url. 
     resource.sources.forEach(source => {
-        const sourceMaterial = document.createElement("li");
+        const sourceMaterial = document.createElement("li")
+        const sourcelenke = document.createElement("a")
 
-        const sourcelenke = document.createElement("a");
-        sourcelenke.textContent = source.title;
-        sourcelenke.href = source.url;
-
-        sourceMaterial.appendChild(sourcelenke);
-        sourceListe.appendChild(sourceMaterial);
+        sourcelenke.textContent = source.title
+        sourcelenke.href = source.url
+    
+        sourceMaterial.appendChild(sourcelenke)
+        sourceListe.appendChild(sourceMaterial)
     });
 
-    document.getElementById("underCategories").appendChild(kategoriNavn);
-    document.getElementById("underCategories").appendChild(teksten);
+    document.getElementById("underCategories").appendChild(kategoriNavn)
+    document.getElementById("underCategories").appendChild(teksten)
     document.getElementById("underCategories").appendChild(sourceListe)
 }
 
-document.addEventListener("DOMContentloaded", skriveUtResrources);
+//lager en overall event listener
+document.addEventListener("DOMContentloaded", skriveUtResrources)
 
+//knytter hver event listener til hoved funksjon.
 document.getElementById("htmlButton").addEventListener('click', function() {
-    skriveUtResrources(resources[0]);
+    skriveUtResrources(resources[0])
     document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("cssButton").addEventListener('click', function() {
-    skriveUtResrources(resources[1]);
+    skriveUtResrources(resources[1])
     document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("JavascriptButton").addEventListener('click', function() {
-    skriveUtResrources(resources[2]);
+    skriveUtResrources(resources[2])
     document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("reactButton").addEventListener('click', function() {
-    skriveUtResrources(resources[3]);
+    skriveUtResrources(resources[3])
     document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 document.getElementById("cmsButton").addEventListener('click', function() {
-    skriveUtResrources(resources[4]);
+    skriveUtResrources(resources[4])
     document.querySelector("#underCategories").classList.remove("hidden")
 })
 
 
+/*const menuButton = document.querySelector(".categories");
+const underCategoriesArea = document.querySelector("#underCategories");
+
+let showUnderCategoriesArea = false;
+menuButton.addEventListener("click", skriveUtResrources());
+
+function ToggleUnderCategoriesArea() {
+    if (!showUnderCategoriesArea) {
+        menuButton.classList.add("hidden");
+        underCategoriesArea.classList.add("underCategories");
+        showUnderCategoriesArea = true;
+    } else {
+        menuButton.classList.remove("hidden");
+        underCategoriesArea.classList.remove("underCategories");
+        showUnderCategoriesArea = false;
+    }
+}
+*/
+
+/* Kilder: 
+https://www.w3schools.com/jsref/met_document_createelement.asp
+https://www.w3schools.com/jsref/prop_node_textcontent.asp
+https://www.w3schools.com/jsref/met_node_appendchild.asp
+*/
